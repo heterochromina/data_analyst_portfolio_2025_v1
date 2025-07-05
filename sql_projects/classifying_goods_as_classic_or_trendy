@@ -5,7 +5,7 @@ SELECT
 	COUNT(DISTINCT EXTRACT(MONTH FROM o.order_date)) AS active_months,
 	CASE WHEN COUNT(DISTINCT EXTRACT(MONTH FROM o.order_date)) >= 12 THEN 'Classic'
 		   ELSE 'Trendy' 
-  END AS product_type
+  	END AS product_type
 FROM products p
 LEFT JOIN orders o ON p.product_id = o.product_id
 GROUP BY p.name
