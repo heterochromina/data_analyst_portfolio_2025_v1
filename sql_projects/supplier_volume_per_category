@@ -1,5 +1,6 @@
--- Find the number of unique suppliers and their total goods provided for each category that e-commerce store has, filtering for the most recent year. Sort by total_goods_provided from highest to lowest values.
+-- This query finds the number of unique suppliers and their total goods provided for each category that e-commerce store has, filtering for the most recent year, then sorting by total_goods_provided from highest to lowest values.
 -- This is a fictional database example!
+
 SELECT 
 	DISTINCT suppliers.category AS category,
 	COUNT(DISTINCT suppliers.name) AS num_suppliers,
