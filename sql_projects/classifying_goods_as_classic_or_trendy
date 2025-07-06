@@ -1,5 +1,7 @@
--- List the overall top five products in alphabetical order and find out if each product is "Classic" or "Trendy / Seasonal". A benchmark for being "Classic" is to be sold for 12 months.
+-- This query lists the overall top five products in alphabetical order and shows if each product is "Classic" or "Trendy / Seasonal". 
+-- A benchmark for being "Classic" is to be sold for 12 months.
 -- This is a fictional database example!
+
 SELECT 
 	p.name AS product_name,
 	COUNT(DISTINCT EXTRACT(MONTH FROM o.order_date)) AS active_months,
